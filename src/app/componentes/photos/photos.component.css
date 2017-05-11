@@ -1,0 +1,56 @@
+#flickrSearch{
+  width: 100%;
+  text-align: center;
+}
+
+#photosDiv{
+  width: 90%;
+  margin: 0 auto;
+}
+
+#photos{
+  width: 150px;
+  height: 150px;
+  float: left;
+  padding: 5px;
+}
+
+#photos:hover{
+  cursor: zoom-in;
+}
+#selectedImg{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#selectedImg::before{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition: opacity .2 cubic-bezier(0.65, 0.05, 0.36, 1);
+  opacity: .7;
+}
+.zoom{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 20px 60px;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transform-origin: 100px 100px;
+  backface-visibility: hidden;
+  opacity: 1;
+}
+.zoom:hover{
+  cursor: zoom-out;
+}

@@ -1,0 +1,22 @@
+<div id="flickrSearch">
+  <h1> Flickr Photo Search</h1>
+  <form>
+    <input [(ngModel)]='searchStr' name='search' placeholder="I'm searching for" appAutofocus>
+    <button (click)='searchPhoto()'>Search</button>
+  </form>
+  <div *ngIf='show'>
+    <div infiniteScroll [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="4500" (scrolled)="onScroll()">
+      <div id="photosDiv" *ngFor="let photo of photos">
+          <div id="photos">
+              <img (click)='onSelectImg(photo.getUrl)' src='{{photo.getUrl}}'>
+          </div>
+      </div>
+      <div id="selectedImg" *ngIf='showSelected'>
+        <div class="zoom">
+          <img (click)='showSelected=false' src='{{a}}'>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

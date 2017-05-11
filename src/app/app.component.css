@@ -1,0 +1,36 @@
+nav{
+  height: 60px;
+  width: 100%;
+  background-color: #738899;
+}
+ul{
+  margin: 5px 0;
+
+}
+nav h1{
+  display: inline-block;
+  margin-top: 10px;
+}
+a{
+  text-decoration: none;
+}
+h1 a{
+  color: #F4CB67;
+  font-size: 33px;
+}
+li a{
+  color: #02021A;
+  padding: 5px 25px;
+  border: 1px solid #C2DB87;
+}
+
+li{
+  list-style: none;
+  float: right;
+  margin: 25px 8px 0px 10px;
+}
+.active{
+  color: white !important;
+  border-color: #F3C054 !important;
+  background-color: #F37054;
+}
