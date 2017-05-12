@@ -18,6 +18,19 @@
 #photos:hover{
   cursor: zoom-in;
 }
+.loading{
+  position: fixed;
+  top: 450px;
+  right: 0;
+  bottom: 0;
+  left: 540px;
+  font-size: 2.5em;
+  width: 180px;
+  height: 50px;
+  color: #1F6BDD;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, .9);
+}
 #selectedImg{
   position: fixed;
   top: 0;

@@ -7,13 +7,11 @@ import { Photo }  from './photo';
 
 export class FlickrSearchService {
 
-
-
   constructor(public http: Http) { }
 
   searchPhoto(pUrl: string): Observable<Photo[]>{
-        var url = pUrl;
-        return this.http.get(url).map(res => res.json());
+        
+        return this.http.get(pUrl).map(res => res.json());
     }
 
 }

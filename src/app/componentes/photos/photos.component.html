@@ -12,9 +12,12 @@
               <img (click)='onSelectImg(photo.getUrl)' src='{{photo.getUrl}}'>
           </div>
       </div>
+      <div class="loading" *ngIf="showLoading">Loading...</div>
       <div id="selectedImg" *ngIf='showSelected'>
         <div class="zoom">
+
           <img (click)='showSelected=false' src='{{a}}'>
+
         </div>
       </div>
     </div>

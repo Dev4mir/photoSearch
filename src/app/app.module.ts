@@ -11,12 +11,12 @@ import { HomeComponent } from './componentes/home/home.component';
 import { AboutComponent } from './componentes/about/about.component';
 import { ServicesComponent } from './componentes/services/services.component';
 import { NotFoundComponent } from './componentes/not-found/not-found.component';
-import { appRoutes } from './componentes/routing/routing.component';
 import { FlickrSearchService } from './services/flickr-search.service';
 import { AutofocusDirective } from './directives/autofocus/autofocus.directive';
 import { TrackScrollDirective } from './directives/trackScroll/track-scroll.directive';
 import { PhotosComponent }  from './componentes/photos/photos.component';
 
+import { appRoutes } from './routing/routing';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { PhotosComponent }  from './componentes/photos/photos.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    InfiniteScrollModule
+    InfiniteScrollModule,
   ],
   providers: [FlickrSearchService],
   bootstrap: [AppComponent]

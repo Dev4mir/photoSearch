@@ -1,9 +1,9 @@
 import { Routes} from '@angular/router';
 
-import { HomeComponent } from '../home/home.component';
-import { AboutComponent } from '../about/about.component';
-import { ServicesComponent } from '../services/services.component';
-import { NotFoundComponent } from '../not-found/not-found.component';
+import { HomeComponent } from '../componentes/home/home.component';
+import { AboutComponent } from '../componentes/about/about.component';
+import { ServicesComponent } from '../componentes/services/services.component';
+import { NotFoundComponent } from '../componentes/not-found/not-found.component';
 
 
 export const appRoutes: Routes = [
