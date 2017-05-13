@@ -1,12 +1,13 @@
 <div id="flickrSearch">
   <h1> Flickr Photo Search</h1>
-  <form>
+  <form class="searchForm">
     <input [(ngModel)]='searchStr' name='search' placeholder="I'm searching for" appAutofocus>
-    <button (click)='searchPhoto()'>Search</button>
+    <button class="serchBtn" (click)='searchPhoto()'>Search</button>
   </form>
+  <div id="scrollDiv" class="scrollOver" infiniteScroll [infiniteScrollDistance]="1"
+   [infiniteScrollThrottle]="300" (scrolled)="onScroll()"
+    [scrollWindow]="false">
   <div *ngIf='show'>
-    <div infiniteScroll [infiniteScrollDistance]="2"
-    [infiniteScrollThrottle]="4500" (scrolled)="onScroll()">
       <div id="photosDiv" *ngFor="let photo of photos">
           <div id="photos">
               <img (click)='onSelectImg(photo.getUrl)' src='{{photo.getUrl}}'>
@@ -15,9 +16,7 @@
       <div class="loading" *ngIf="showLoading">Loading...</div>
       <div id="selectedImg" *ngIf='showSelected'>
         <div class="zoom">
-
-          <img (click)='showSelected=false' src='{{a}}'>
-
+          <img class="z2" (click)='showSelected=false' src='{{a}}'>
         </div>
       </div>
     </div>
